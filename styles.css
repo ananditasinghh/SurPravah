@@ -1,8 +1,38 @@
 body {
     text-align: center;
-    background-color: #FFF7E9; /* Updated background color */
-    color: black; /* Text color for the entire website */
+    background-color: #FFF7E9; 
+    color: black; 
   }
+
+nav {
+    background-color: black;
+    padding: 10px;
+  }
+  
+
+nav ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+  }
+  
+nav li {
+    margin: 0 15px;
+  }
+  
+nav a {
+    text-decoration: none;
+    color: white;
+    font-weight: bold;
+    font-size: 1.2rem;
+  }
+
+nav h2{
+  color: white;
+  padding: 1px;
+}
   
   h1 {
     font-size: 5rem;
@@ -64,6 +94,25 @@ body {
     font-family: 'Arvo', cursive;
     line-height: 2;
     font-weight: 900;
+    color: #ced2dc;
+    text-shadow: 3px 0 #9caac8;
+    border-radius: 15px;
+    display: inline-block;
+    width: 150px;
+    height: 150px;
+    text-align: center;
+    margin: 10px;
+    background-color: #0f26c0;
+  
+  }
+
+  .guitar{
+    outline: none;
+    border: 2Opx solid #214595;
+    font-size: 5rem;
+    font-family: 'Arvo', cursive;
+    line-height: 2;
+    font-weight: 900;
     color: #214595;
     text-shadow: 3px 0 #214595;
     border-radius: 15px;
@@ -74,3 +123,12 @@ body {
     margin: 10px;
     background-color: #FFF7E9;
   }
+
+  #title {
+    margin-bottom: 2px; 
+  }
+  
+  #guitar-section {
+    margin-top: 2px; 
+  }
+  
