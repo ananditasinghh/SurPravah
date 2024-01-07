@@ -1,30 +1,68 @@
-var numberOfDrumButtons = document.querySelectorAll(".drum").length;
+document.querySelectorAll('nav a').forEach(anchor => {
+  anchor.addEventListener('click', function (e) {
+    e.preventDefault();
 
-for (var i = 0; i < numberOfDrumButtons; i++) {
+    const targetId = this.getAttribute('href').substring(1);
+    const targetElement = document.getElementById(targetId);
 
-  document.querySelectorAll(".drum")[i].addEventListener("click", function() {
+    if (targetElement) {
+      window.scrollTo({
+        top: targetElement.offsetTop,
+        behavior: 'smooth'
+      });
 
-    var buttonInnerHTML = this.innerHTML;
-
-    makeSound(buttonInnerHTML);
-
-    buttonAnimation(buttonInnerHTML);
-
+      // Add code for entering full-screen mode after scrolling to the title section
+      if (targetId === 'title') {
+        toggleFullScreen();
+      }
+    }
   });
+});
 
+function toggleFullScreen() {
+  const element = document.documentElement;
+
+  if (!document.fullscreenElement) {
+    if (element.requestFullscreen) {
+      element.requestFullscreen();
+    }
+  } else {
+    if (document.exitFullscreen) {
+      document.exitFullscreen();
+    }
+  }
+}
+
+
+
+
+var numberOfDrumButtons = document.querySelectorAll(".drum").length;
+for (var i = 0; i < numberOfDrumButtons; i++) {
+  document.querySelectorAll(".drum")[i].addEventListener("click", function() {
+    var buttonInnerHTML = this.innerHTML;
+    makeSound(buttonInnerHTML);
+    buttonAnimation(buttonInnerHTML);
+  });
+}
+
+var numberOfGuitarButtons = document.querySelectorAll(".guitar").length;
+
+for (var i = 0; i < numberOfGuitarButtons; i++) {
+  document.querySelectorAll(".guitar")[i].addEventListener("click", function() {
+    var buttonInnerHTML = this.innerHTML;
+    makeSound(buttonInnerHTML);
+    buttonAnimation(buttonInnerHTML);
+  });
 }
 
 document.addEventListener("keypress", function(event) {
-
   makeSound(event.key);
-
   buttonAnimation(event.key);
 
 });
 
 
 function makeSound(key) {
-
   switch (key) {
     case "w":
       var tom1 = new Audio("sounds/tom-1.mp3");
@@ -61,6 +99,23 @@ function makeSound(key) {
       kick.play();
       break;
 
+//GUITAR 
+
+      case "C":
+        var snare = new Audio("sounds/snare.mp3");
+        snare.play();
+        break;
+  
+      case "D":
+        var crash = new Audio('sounds/crash.mp3');
+        crash.play();
+        break;
+  
+      case "E":
+        var kick = new Audio('sounds/kick-bass.mp3');
+        kick.play();
+        break;
+
 
     default: console.log(key);
 
@@ -79,3 +134,4 @@ function buttonAnimation(currentKey) {
   }, 100);
 
 }
+
