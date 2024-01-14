@@ -1,0 +1,47 @@
+doctype html
+html(lang="en" dir="ltr")
+
+  head
+    meta(charset="utf-8")
+    title Music Kit
+    link(rel="stylesheet", href="styles.css")
+    link(href="https://fonts.googleapis.com/css?family=Arvo", rel="stylesheet")
+
+  body
+    nav
+      ul
+        li
+          a(href="#title") Drum
+        li
+          a(href="#guitar-section") Guitar
+        li
+          a(href="#contact-section") Contact
+
+    h1#title Music Kit 🎶
+    
+    // Drum Kit
+    div.set
+      h2 DRUMS
+      br
+      button.w.drum w
+      button.a.drum a
+      button.s.drum s
+      button.d.drum d
+      button.j.drum j
+      button.k.drum k
+      button.l.drum l
+
+    h2 GUITAR
+    div#guitar-section.set
+      button.guitar C
+      button.guitar D
+      button.guitar E
+
+    div#contact-section.image
+      img(src="Screenshot 2024-01-07 at 12.16.54 AM.png", height="900 px", width="1600px")
+
+    script(src="index.js", charset="utf-8")
+
+    footer
+      nav
+        h2 made by ananditasingh 2024
