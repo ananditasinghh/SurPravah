@@ -132,6 +132,17 @@ function buttonAnimation(currentKey) {
 
 
 document.addEventListener("DOMContentLoaded", function () {
+  // Delay before fading in the text
+  const delayBeforeFadeIn = 1500;
+  // Show the fade-in text with animation
+  const fadeInText = document.querySelector(".fade-in-text");
+  setTimeout(() => {
+    fadeInText.style.opacity = 1;
+  }, delayBeforeFadeIn);
+});
+
+
+document.addEventListener("DOMContentLoaded", function () {
   var mySwiper = new Swiper('.swiper-container', {
     direction: 'horizontal',
     loop: true,
