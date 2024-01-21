@@ -124,16 +124,27 @@ function makeSound(key) {
 
 
 function buttonAnimation(currentKey) {
-
   var activeButton = document.querySelector("." + currentKey);
-
   activeButton.classList.add("pressed");
-
   setTimeout(function() {
     activeButton.classList.remove("pressed");
-  }, 100);
+  }, 100);}
 
-}
+
+document.addEventListener("DOMContentLoaded", function () {
+  var mySwiper = new Swiper('.swiper-container', {
+    direction: 'horizontal',
+    loop: true,
+    pagination: {
+      el: '.swiper-pagination',
+      clickable: true,
+    },
+    navigation: {
+      nextEl: '.swiper-button-next',
+      prevEl: '.swiper-button-prev',
+    },
+  });
+});
 
 
 
