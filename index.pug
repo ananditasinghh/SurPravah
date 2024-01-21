@@ -1,26 +1,40 @@
 doctype html
 html(lang="en" dir="ltr")
-
   head
     meta(charset="utf-8")
     title Music Kit
     link(rel="stylesheet", href="styles.css")
     link(href="https://fonts.googleapis.com/css?family=Arvo", rel="stylesheet")
+    link(rel="stylesheet", href="https://unpkg.com/swiper/swiper-bundle.min.css")
+    link(href="https://fonts.googleapis.com/css?family=Arvo", rel="stylesheet")
 
   body
+    .top-section
+      .fade-in-text Sur-Pravah
+    br
+    br
+
     nav
       ul
-        li
-          a(href="#title") Drum
-        li
-          a(href="#guitar-section") Guitar
-        li
-          a(href="#contact-section") Contact
+        li: a(href="#title") Drum
+        li: a(href="#guitar-section") Guitar
+        li: a(href="#contact-section") Contact
+    br
+    br
+    br
+
+    .swiper-container
+      .swiper-wrapper
+        .swiper-slide: img(src="Screenshot 2024-01-21 at 9.56.55 PM.png", alt="Slide 1", width="500px")
+        .swiper-slide: img(src="Screenshot 2024-01-21 at 9.59.14 PM.png", alt="Slide 2", width="500px")
+        .swiper-slide: img(src="Screenshot 2024-01-20 at 3.13.35 PM.png", alt="Slide 3", width="500px")
+        // Add more slides as needed
+      .swiper-button-next
+      .swiper-button-prev
 
     h1#title Music Kit 🎶
-    
     // Drum Kit
-    div.set
+    .set
       h2 DRUMS
       br
       button.w.drum w
@@ -32,16 +46,17 @@ html(lang="en" dir="ltr")
       button.l.drum l
 
     h2 GUITAR
-    div#guitar-section.set
+    .set#guitar-section
       button.guitar C
       button.guitar D
       button.guitar E
 
-    div#contact-section.image
-      img(src="Screenshot 2024-01-07 at 12.16.54 AM.png", height="900 px", width="1600px")
+    .image#contact-section: img(src="Screenshot 2024-01-07 at 12.16.54 AM.png", height="900px", width="1600px")
 
     script(src="index.js", charset="utf-8")
-
     footer
       nav
         h2 made by ananditasingh 2024
+
+    script(src="https://unpkg.com/swiper/swiper-bundle.min.js")
+
