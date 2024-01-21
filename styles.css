@@ -202,8 +202,8 @@ nav h2{
   }
   
   #displayimage img {
-    width: 1700px; /* Ensure the image doesn't exceed the width of its container */
-    height: 400px; /* Maintain the image's aspect ratio */
+    width: 1700px;
+    height: 400px; 
   }
 
 
