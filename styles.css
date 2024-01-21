@@ -4,6 +4,37 @@ body {
     color: black; /* Text color for the entire website */
   }
 
+  .top-section {
+    height: 90vh;
+    opacity: 0.88;
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding-top: 0px;
+    padding-bottom: 10px;
+    
+    background: url("Screenshot 2024-01-20 at 6.54.24 PM.png") center/cover no-repeat; /* Set background image properties */
+    color: rgb(31, 0, 123);
+    font-weight: bolder;
+    font-style: normal;
+    font-size: 40px;
+  }
+
+  .top-section .fade-in-text {
+    font-size: 2em;
+    opacity: 0;
+    transition: opacity 3s ease-in-out;
+  }
+
+  .fade-in-text{
+    color: rgb(0, 110, 110);
+    padding-bottom: 210px;
+    padding-left: 0px;
+    padding-right: 05px;
+    
+  }
+
 nav {
     background-color: black;
     padding: 10px;
@@ -113,15 +144,15 @@ nav h2{
     font-family: 'Arvo', cursive;
     line-height: 2;
     font-weight: 900;
-    color: #214595;
-    text-shadow: 3px 0 #214595;
+    color: #ced2dc;
+    text-shadow: 3px 0 #9caac8;
     border-radius: 15px;
     display: inline-block;
     width: 150px;
     height: 150px;
     text-align: center;
     margin: 10px;
-    background-color: #FFF7E9;
+    background-color: #0f26c0;
   }
 
   #title {
@@ -132,3 +163,82 @@ nav h2{
     margin-top: 2px; 
   }
   
+  @media only screen and (max-width: 600px) {
+    h1 {
+      font-size: 3rem;
+    }
+
+    .set {
+      margin: 5% auto;
+    }
+
+    .drum,
+    .guitar {
+      font-size: 3rem;
+      width: 100px;
+      height: 100px;
+    }
+    
+    .image img {
+        max-width: 100%;
+        height: auto;
+        display: block;
+        margin: 0 auto;
+      }
+  }
+
+  @media only screen and (max-width: 400px) {
+    nav ul {
+      flex-direction: column;
+    }
+
+    nav li {
+      margin: 10px 0;
+    }
+  }
+
+  #displayimage {
+    display: block; /* Ensure the element is displayed as a block */
+  }
+  
+  #displayimage img {
+    width: 1700px; /* Ensure the image doesn't exceed the width of its container */
+    height: 400px; /* Maintain the image's aspect ratio */
+  }
+
+
+  .swiper-container {
+    width: 100%;
+    height: 100vh;
+  }
+
+  .swiper-slide {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .swiper-button-next,
+  .swiper-button-prev {
+    position: absolute;
+    top: 50%;
+    transform: translateY(1700%);
+    width: 40px;
+    height: 40px;
+    background-color: #214595;
+    border-radius: 50%;
+    color: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 20px;
+    cursor: pointer;
+  }
+
+  .swiper-button-next {
+    right: 10px;
+  }
+
+  .swiper-button-prev {
+    left: 10px;
+  }
