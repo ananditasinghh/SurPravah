@@ -2,18 +2,44 @@
 <html lang="en" dir="ltr">
   <head>
     <meta charset="utf-8">
+    
     <title>Music Kit</title>
+    
     <link rel="stylesheet" href="styles.css">
     <link href="https://fonts.googleapis.com/css?family=Arvo" rel="stylesheet">
+    <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css"/>
+    <link href="https://fonts.googleapis.com/css?family=Arvo" rel="stylesheet">
+    
   </head>
   <body>
+
+  <div class="top-section">
+      <div class="fade-in-text">Sur-Pravah</div>
+  </div>
+<br><br>
+    
+    
     <nav>
       <ul>
         <li><a href="#title">Drum</a></li>
         <li><a href="#guitar-section">Guitar</a></li>
         <li><a href="#contact-section">Contact</a></li>
       </ul>
-    </nav>
+    </nav> <br><br><br>
+
+    
+    <div class="swiper-container">
+      <div class="swiper-wrapper">
+        <div class="swiper-slide"><img src="Screenshot 2024-01-21 at 9.56.55 PM.png" alt="Slide 1" width="500px"></div>
+        <div class="swiper-slide"><img src="Screenshot 2024-01-21 at 9.59.14 PM.png" alt="Slide 2" width="500px"></div>
+        <div class="swiper-slide"><img src="Screenshot 2024-01-20 at 3.13.35 PM.png" alt="Slide 3" width="500px"></div>
+        <!-- Add more slides as needed -->
+      </div>
+      <div class="swiper-button-next"></div>
+      <div class="swiper-button-prev"></div>
+    </div>
+
+    
     <h1 id="title">Music Kit 🎶</h1>
     <!-- Drum Kit-->
     <div class="set">
@@ -26,12 +52,16 @@
       <button class="k drum">k</button>
       <button class="l drum">l</button>
     </div>
+
+    
     <h2>GUITAR</h2>
+    <!-- GUITAR-->
     <div class="set" id="guitar-section">
       <button class="guitar">C</button>
       <button class="guitar">D</button>
       <button class="guitar">E</button>
     </div>
+    
     <div class="image" id="contact-section"><img src="Screenshot 2024-01-07 at 12.16.54 AM.png" height="900 px" width="1600px"></div>
     <script src="index.js" charset="utf-8"></script>
     <footer>
@@ -39,5 +69,7 @@
         <h2>made by ananditasingh 2024</h2>
       </nav>
     </footer>
+    
+  <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
   </body>
 </html>
