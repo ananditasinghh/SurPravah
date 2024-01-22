@@ -198,7 +198,7 @@ nav h2{
   }
 
   #displayimage {
-    display: block; /* Ensure the element is displayed as a block */
+    display: block; 
   }
   
   #displayimage img {
